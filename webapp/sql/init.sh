@@ -24,5 +24,5 @@ cp -r ../../initial_data/*.db ../tenant_db/
 dbArray=`find ../../tenant_db -name *.db`
 for db in $dbArray;
 do
-	sqlite3 db < ./add_index.sql;
+	sqlite3 db < ./tenant/add_index.sql;
 done
