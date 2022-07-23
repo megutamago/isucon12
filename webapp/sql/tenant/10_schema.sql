@@ -30,5 +30,3 @@ CREATE TABLE player_score (
   created_at BIGINT NOT NULL,
   updated_at BIGINT NOT NULL
 );
-
-CREATE INDEX 'competition_created_at_idx' on competition(created_at);
