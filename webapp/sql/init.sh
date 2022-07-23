@@ -17,12 +17,12 @@ mysql -u"$ISUCON_DB_USER" \
 		"$ISUCON_DB_NAME" < init.sql
 
 # SQLiteのデータベースを初期化
-# rm -f ../tenant_db/*.db
-# cp -r ../../initial_data/*.db ../tenant_db/
+rm -f ../tenant_db/*.db
+cp -r ../../initial_data/*.db ../tenant_db/
 
-# # indexを付与
-# dbArray=`find ../tenant_db -name *.db`
-# for db in $dbArray;
-# do
-# 	sqlite3 $db < ./tenant/add_index.sql;
-# done
+# indexを付与
+dbArray=`find ../tenant_db -name *.db`
+for db in $dbArray;
+do
+	sqlite3 $db < ./tenant/add_index.sql;
+done
